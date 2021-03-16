@@ -1,0 +1,78 @@
+
+<!doctype html>
+<html>
+<body>
+
+
+    <p>Checkbox Challenge:</p>
+    <div>
+      <input type="checkbox" id="dos" name="box" >
+    </div>
+    <div>
+      <input type="checkbox" id="tres" name="box" >
+    </div>
+    <div>
+      <input type="checkbox" id="cuatro" name="box" >
+    </div>
+    <div>
+      <input type="checkbox" id="cinco" name="box" >
+    </div>
+    
+    <div>
+      <input type="checkbox" id="checkAll" onclick="myFunction(this)" >
+      <label id ="lbl" for="car">Check All</label>
+    </div>
+
+  <script>
+
+  	function myFunction(source)
+  	{
+  		var allchecked = document.getElementById('checkAll');
+  		var checkbox2 = document.getElementById('dos');
+  		var checkbox3 = document.getElementById('tres');
+  		var checkbox4 = document.getElementById('cuatro');
+  		var checkbox5 = document.getElementById('cinco');
+
+  		var label = document.getElementById('lbl');
+ 		
+ 		if(allchecked.checked)
+ 		{
+ 			checkbox2.checked = "unchecked";
+ 			checkbox3.checked = "unchecked";
+ 			checkbox4.checked = "unchecked";
+ 			checkbox5.checked = "unchecked";
+
+ 			label.innerText = "Uncheck All";
+ 		}
+ 		else
+ 		{
+ 			checkbox2.checked = this.checked;
+ 			checkbox3.checked = this.checked;
+ 			checkbox4.checked = this.checked;
+ 			checkbox5.checked = this.checked;
+
+
+ 			label.innerText = "Check All";
+ 		}
+  	
+  	}
+
+
+
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
